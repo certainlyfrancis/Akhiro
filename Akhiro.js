@@ -210,24 +210,13 @@ function initializeBot() {
                 }
               };
 
-              if (event.body && event.body.toLowerCase() === "prefix") {
-                api.sendMessage(
-                  fonts.applyFonts(`▄▀█ █▄▀ █░█ █ █▀█ █▀█
+              if (event.body && event.body.toLowerCase() === "bot") {
+       api.sendMessage({body: `▄▀█ █▄▀ █░█ █ █▀█ █▀█
 █▀█ █░█ █▀█ █ █▀▄ █▄█
 ━━━━━━━━━━━━━━━━━━━
-Hello there User, Im AkhiroBot. My Prefix Is This [ ${global.AkhiroBot.botPrefix} ]. I Hope You Will Enjoy Using Me, Have Fun. Thanks!
+ 𝖧𝖾𝗅𝗅𝗈 𝗍𝗁𝖾𝗋𝖾 𝗎𝗌𝖾𝗋 𝗈𝖿 𝗔𝗸𝗵𝗶𝗿𝗼𝗕𝗢𝗧, 𝖬𝖺𝗒 𝖨 𝗂𝗇𝗍𝗋𝗈𝖽𝗎𝖼𝖾 𝗆𝗒 𝗌𝖾𝗅𝖿 𝖿𝗂𝗋𝗌𝗍, 𝖨𝗆 𝗔𝗸𝗵𝗶𝗿𝗼𝗕𝗢𝗧, 𝖺 𝖿𝗋𝗂𝖾𝗇𝖽𝗅𝗒 𝖠𝗋𝗍𝗂𝖿𝗂𝖼𝗂𝖺𝗅 𝖨𝗇𝗍𝖾𝗅𝗅𝗂𝗀𝖾𝗇𝖼𝖾 𝖬𝖾𝗌𝗌𝖾𝗇𝗀𝖾𝗋 𝖢𝗁𝖺𝗍𝖡𝗈𝗍 𝗆𝖺𝖽𝖾 𝖻𝗒 𝗥𝘂𝗶 𝗥𝗲𝗼𝗴𝗼, 𝗙𝗿𝗮𝗻𝗰𝗶𝘀 𝗟𝗼𝘆𝗱 𝗥𝗮𝘃𝗮𝗹 𝖺𝗇𝖽 𝗟𝗶𝗮𝗻𝗲 𝗖𝗮𝗴𝗮𝗿𝗮. 𝖬𝗒 𝖼𝗎𝗋𝗋𝖾𝗇𝗍 𝗉𝗋𝖾𝖿𝗂𝗑 𝗂𝗌 𝗍𝗁𝗂𝗌 ${global.AkhiroBot.botPrefix}, 𝖸𝗈𝗎 𝗆𝖺𝗒 𝗎𝗌𝖾 𝗍𝗁𝖾 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 ${global.AkhiroBot.botPrefix}𝗁𝖾𝗅𝗉 𝗍𝗈 𝗌𝖾𝖾 𝗍𝗁𝖾 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌. 
 
-AkhiroBot Is A Collab Bot File Project Made By AkhiroDev, LiANE And Yu3Bot, So Please If You Managed To Find This File, Please Don't Abuse This Bot File Project Of Our's.
-
-DEVELOPERS OF AKHIROBOT:
-- YueBot ( Rui Reogo )
-- AkhiroDev ( Francis Loyd Raval )
-- LiANE ( Liane Cagara )
-
-YSD: AkhiroBot`, "sans"),
-                  event.threadID,
-                  event.messageID,
-                );
+𝖳𝗁𝖺𝗇𝗄 𝗒𝗈𝗎 𝖿𝗈𝗋 𝖼𝗁𝗈𝗈𝗌𝗂𝗇𝗀 𝗆𝖾 𝖺𝗌 𝗒𝗈𝗎𝗋 𝖠𝖨 𝖻𝗎𝖽𝖽𝗒. 𝖬𝗒 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋𝗌 𝖺𝗋𝖾 𝖼𝗎𝗋𝗋𝖾𝗇𝗍𝗅𝗒 𝗎𝗉𝖽𝖺𝗍𝗂𝗇𝗀 𝗆𝗒 𝗌𝗒𝗌𝗍𝖾𝗆 𝖻𝗎𝗍 𝗍𝗁𝖾𝗒 𝖽𝗈 𝗍𝗁𝖾𝗂𝗋 𝖻𝖾𝗌𝗍 𝗍𝗈 𝗎𝗉𝖽𝖺𝗍𝖾 𝗆𝗒 𝗌𝗒𝗌𝗍𝖾𝗆.`, attachment: fs.createReadStream(__dirname + "/akhiro/cmds/noprefix/prefix.mp4")});
               } else if (event.body && event.body.toLowerCase().startsWith(global.AkhiroBot.botPrefix)) {
                 await processCommand();
               }
@@ -245,7 +234,6 @@ YSD: AkhiroBot`, "sans"),
 }
 
 app.listen(PORT, () => {
-  initializeBot();
   console.log(gradient.retro(`    ▄▀█ █▄▀ █░█ █ █▀█ █▀█ █▄▄ █▀█ ▀█▀
     █▀█ █░█ █▀█ █ █▀▄ █▄█ █▄█ █▄█ ░█░
               Version 1.0.0`));
@@ -268,5 +256,6 @@ app.listen(PORT, () => {
   console.log(gradient.retro(`[ BOT NAME ] AKHIROBOT`));
   console.log(gradient.retro(`[ BOT PRFX ] ${global.AkhiroBot.botPrefix} `));
   console.log(gradient.retro(`[ BOT OWNER ] ${global.AkhiroBot.botOwner}`));
-  console.log(gradient.retro(`[ BOT DEVS ] ${global.AkhiroBot.botDev}`))
+  console.log(gradient.retro(`[ BOT DEVS ] ${global.AkhiroBot.botDev}`));
+  initializeBot()
 }); 
