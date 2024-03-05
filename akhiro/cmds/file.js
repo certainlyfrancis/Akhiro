@@ -2,7 +2,7 @@ const fs = require('fs');
 
 module.exports.config = {
   name: "file",
-  description: "File command by cliff, converted to akhiro by Rui"
+  description: "File command by cliff, converted to akhiro by Rui",
   author: "Rui | Cliff",
   usage: "file [fileName]",
   role: 1,
